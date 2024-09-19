@@ -1,0 +1,75 @@
+/* header.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu-btn {
+  position: absolute;
+  right: 9px;
+  top: 2.5%;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff;
+}
+.menu-btn:hover i {
+  color: #ffd000;
+}
+.menu-btn i {
+  transition: all 0.3s;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.search-bar button {
+  background-color: #555;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.search-bar button i {
+  font-size: 16px;
+}
+
+.account-icon a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.account-icon a:hover {
+  color: #ddd;
+}

@@ -1,0 +1,818 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #2c2c2c;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.5s ease;
+  /*background-color: rgba(0, 0, 0, 0.41);*/
+  background-color: rgba(0, 0, 0, 0.807);
+}
+
+header .brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation {
+  position: relative;
+}
+
+.navigation-items {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Position dropdown relative to parent */
+  top: 40px;
+  left: 12.8rem; /* Align with the left edge of the Room link */
+  background-color: white; /* Background color for dropdown */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for effect */
+  z-index: 1; /* Ensure dropdown is on top */
+  border-radius: 2px;
+}
+
+.dropdown-content a {
+  display: block; /* Stack links vertically */
+  padding: 10px 25px; /* Spacing for dropdown links */
+  color: black; /* Text color */
+  text-decoration: none; /* Remove underline */
+  border-bottom: 1px solid rgb(145, 145, 145);
+}
+
+.dropdown-content a:hover {
+  background-color: #ffbf00; /* Highlight on hover */
+  color: white;
+  border: none;
+}
+
+header .navigation .navigation-items .links {
+  position: relative;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header .navigation .navigation-items .links:before {
+  content: "";
+  position: absolute;
+  background-color: #ffbf00;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  transition: 0.5s;
+}
+
+header .navigation .navigation-items .links:hover:before {
+  width: 100%;
+}
+
+header .navigation .navigation-items .links-book {
+  position: relative;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 12.5rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: #fdbe00d3;
+  border-radius: 1px;
+  padding: 9px 15px 9px 15px;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+header .navigation .navigation-items .links-book:hover {
+  background-color: #ffbf00;
+}
+
+header .navigation .navigation-items .btn-link {
+  position: relative;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header .navigation .navigation-items .btn-link:before {
+  content: "";
+  position: absolute;
+  background-color: #ffbf00;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  transition: 0.5s;
+}
+
+header .navigation .navigation-items .btn-link:hover:before {
+  width: 100%;
+}
+
+header .navigation .navigation-items .btn-link-sign {
+  position: relative;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header .navigation .navigation-items .btn-link-sign:before {
+  content: "";
+  position: absolute;
+  background-color: #ffbf00;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  transition: 0.5s;
+}
+
+header .navigation .navigation-items .btn-link-sign:hover:before {
+  width: 100%;
+}
+
+.logo-container {
+  flex: 0 0 11rem; /* set logo width to 100px */
+  margin-right: 20px;
+}
+
+.logo-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* make image take up full width of logo container */
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 200px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #2696e9;
+}
+
+.home .content h1 {
+  text-align: center;
+}
+
+.home .content p {
+  text-align: center;
+}
+/*.home:before {
+  z-index: 777;
+  content: "";
+  position: absolute;
+  background: rgba(3, 96, 251, 0.3); // FOR OVERLAY BACKGROUND
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+*/
+
+.home .content {
+  z-index: 888;
+  color: white;
+  width: 70%;
+  margin-top: 50px;
+  display: none;
+  text-align: center; /* Centers inline elements */
+}
+
+.home .content.active {
+  display: block;
+}
+
+.home .content h1 {
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+
+.home .content h1 span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.home .content p {
+  margin-bottom: 65px;
+}
+
+.home .content a {
+  background-color: white;
+  padding: 8px 20px;
+  color: #2c2c2c;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: 0.5s ease;
+}
+
+.home .content a:hover {
+  background-color: #ffbf00;
+  color: white;
+}
+
+.home .media-icons {
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .media-icons a {
+  color: white;
+  font-size: 1.6em;
+  transition: 0.5s ease;
+}
+
+.home .media-icons a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.home .media-icons a:hover {
+  color: #ffbf00;
+  transform: scale(1.3);
+}
+
+.home video {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active {
+  background: #ffbf00;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+  transform: scale(1.2);
+}
+
+.video-slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0; /* Start with the slide hidden */
+  transition: opacity 2s ease; /* Transition for opacity change */
+}
+
+.video-slide.active {
+  opacity: 10; /* Fade in to full opacity */
+}
+
+/*------------------------- In case - transition with clip path ---------------------------*/
+/*.video-slide {
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+  opacity: 0; // Start with the slide hidden 
+  transition: clip-path 2s ease, opacity 2s ease;  Transition both properties 
+}
+
+.video-slide.active {
+  clip-path: circle(150% at 0 50%);
+  opacity: 1; // Make the slide visible 
+}
+*/
+
+/*------------ START CHECK AVAILABILITY -----------------*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+}
+
+input {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.book {
+  margin: 10px 10px;
+  padding: 40px 30px;
+  background: #212121;
+  color: white;
+}
+
+.book .book-title {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.book .book-title span {
+  color: #ffbf00;
+}
+
+.book h1 {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.book .input-submit {
+  padding: 12px;
+  border-radius: 2px;
+  border-right: 2px solid hsla(0, 0%, 100%, 0.307);
+  border-bottom: 2px solid hsla(0, 0%, 100%, 0.307);
+}
+
+.book .check-submit {
+  padding: 12px;
+  margin-top: 30px;
+  transition: 0.5s ease;
+  border-right: 2px solid hsla(0, 0%, 100%, 0.307);
+  border-right: 2px solid hsla(0, 0%, 100%, 0.307);
+}
+
+.book .check-submit:hover {
+  background-color: #f0b402;
+  color: white;
+}
+
+.book input:nth-last-child(1) {
+  background: #454545;
+  color: white;
+}
+
+/*-------------- END CHECK AVAILABILITY ----------------*/
+
+/*------------ START ABOUT US -----------------*/
+
+.left,
+.right {
+  width: 50%;
+  padding: 30px;
+}
+
+.top {
+  margin: 20px 0 70px 0;
+
+  /*margin: 170px 0 70px 0;*/
+}
+
+.heading h1 {
+  font-size: 100px;
+  font-weight: 500;
+  opacity: 0.1;
+  font-family: serif;
+  position: absolute;
+  top: -30px;
+}
+
+.heading h2 {
+  margin: 30px 0;
+  font-size: 45px;
+  font-family: serif;
+  font-weight: 400;
+}
+
+.about .heading h1 {
+  top: 190px;
+}
+
+.about {
+  padding: 155px 30px 75px 30px;
+  position: relative;
+}
+
+.about .left {
+  margin: 30px 0 0 30px;
+}
+
+.about p {
+  font-size: 15px;
+}
+
+.about button {
+  margin: 30px 0;
+  background-color: #f0b402;
+  padding: 8px 30px;
+  color: #ffffff;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: 0.5s ease;
+  border: none;
+  letter-spacing: 1.5px;
+  -webkit-box-shadow: 7px 7px 11px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 11px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 11px -9px rgba(0, 0, 0, 0.75);
+}
+
+.about button:hover {
+  background-color: #000000a1;
+  color: white;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between; /* Align children (left and right) with space in between */
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Optional: Add space between left and right sections */
+}
+
+/* Style for the left section */
+.left {
+  flex: 1; /* Allow the left section to take up available space */
+  max-width: 50%; /* Optional: Ensure the left section doesn’t exceed 50% width */
+}
+
+/* Style for the right section */
+.right {
+  flex: 1; /* Allow the right section to take up available space */
+  max-width: 50%; /* Ensures the right section does not exceed 50% width */
+}
+
+/* Style for the image in the right section */
+.right img {
+  width: 100%; /* Make the image take up the full width of its container */
+  height: auto; /* Maintain aspect ratio of the image */
+  display: block; /* Remove any extra space below the image */
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.75);
+}
+/*-------------- END ABOUT US----------------*/
+
+/*-------------- START EXPLORE GUIDELINES ----------------*/
+
+.services .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  color: white;
+  padding: 25px 0 0 0;
+}
+
+.services .heading .hostel-text {
+  color: #ffffff;
+}
+
+.services .heading p {
+  display: inline-block;
+  color: #ffc800;
+}
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding: 18px 80px 50px 80px;
+  background-color: #212121;
+  box-shadow: 0px 0px 13px 6px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0px 0px 13px 6px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 13px 6px rgba(0, 0, 0, 0.22);
+}
+
+.services .box-container .box {
+  padding: 0.5rem 1.5rem 1.3rem 1.5rem;
+  font-size: 0.7rem;
+  color: #353535;
+  border-radius: 0.2rem;
+  text-align: center;
+  background-color: white;
+  transition: 0.5s ease;
+}
+
+.services .box-container .box:hover {
+  transform: scale(1.1);
+}
+
+.services .box-container .box h3 {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Optional: Center text within the items */
+}
+
+.bk-icons {
+  margin: 5px 0;
+}
+
+.heart-icons {
+  margin: 5px 0;
+}
+
+.slot-icons {
+  margin: 5px 0;
+}
+
+.coms-icons {
+  margin: 5px 0;
+}
+
+.cf-icon-svg {
+  margin: 5px 0;
+}
+
+/*-------------- END EXPLORE GUIDELINES ----------------*/
+
+/*-------------------------------- START Exploring ------------------------------------*/
+.banner {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(17, 17, 17, 0.7)),
+      to(rgba(17, 17, 17, 0, 7))
+    ),
+    url(../assets/img/room1.jpg) no-repeat;
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
+    url(../assets/img/room1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.banner .content span {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.banner .content h3 {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  margin-top: 1rem;
+}
+
+.banner .content p {
+  max-width: 60rem;
+  margin: 1rem auto 2.5rem;
+  font-size: 0.8rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.banner .content .btn {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+}
+
+.banner .content .btn:hover {
+  background-color: #f0b402;
+  border: 1px solid #f0b402;
+}
+/*-------------------------------- END Exploring ------------------------------------*/
+
+/*-------------------------------- START OUR ROOMS ------------------------------------*/
+
+/*-------------------------------- END OUR ROOMS ------------------------------------*/
+
+@media (max-width: 1024px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .home .media-icons {
+    right: 20px;
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  header .navigation.active {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation .navigation-items .links {
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items .links-book {
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items .btn-link {
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items .btn-link-sign {
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items .links:before {
+    background: #222;
+    height: 3px;
+  }
+
+  header .navigation.active .navigation-items {
+    background: white;
+    width: 600px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+
+  .menu-btn {
+    background: url(../website/image/menu.svg) no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .form .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .check-submit {
+    width: auto;
+  }
+
+  .services .heading span {
+    display: block; /* Makes the heading take up the full width */
+    background-color: #212121;
+    color: white;
+    padding: 25px 0 0 0;
+    text-align: center; /* Center the heading text */
+  }
+
+  /* Service Heading Text Styling */
+  .services .heading p {
+    color: #f0b402;
+  }
+
+  /* Flexbox for the boxes - Two rows, three columns */
+
+  /* Heading Size Inside Boxes */
+  .services .box-container .box h3 {
+    font-size: 1rem;
+    margin: 6px 0;
+  }
+
+  /* Flexbox Alignment for Box Content */
+  .box {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text within the items */
+  }
+
+  .go-icons {
+    width: 74px;
+    height: 74px;
+  }
+}
+
+.menu-btn.active {
+  z-index: 999;
+  background: url("../website/image/close.svg") no-repeat;
+  background-size: 30px;
+  background-position: center;
+  transition: 0.5s ease;
+}

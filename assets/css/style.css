@@ -1,0 +1,336 @@
+.four-box-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    flex: 1;
+}
+
+.box_1 {
+    background-color: #34f2ec;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 18px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.box_2 {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    flex: 1;
+    }
+
+.box i {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #9f1818; /* Adjust color as needed */
+}
+
+.box .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.box h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.box p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.dark-blue-icon {
+    color: #00008B;
+}
+
+.large-icon {
+    font-size: 24px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    flex-wrap: wrap; 
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #00008B; /* Adjust color as needed */
+}
+
+.breadcrumb a.active {
+    font-weight: bold; /* Highlight the active link */
+}
+
+.breadcrumb i {
+    color: #00008B; /* Adjust color as needed */
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    text-align: center;
+    background-color: #dddddd;
+}
+
+tr {
+    text-align: center;
+}
+
+/* Refresh Stats Button */
+#refreshStats {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.guest-details {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.guest-details h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.guest-info-form {
+    width: 100%;
+}
+
+.guest-info-row {
+    display: flex;
+    gap: 10px;
+}
+
+.guest-info-row input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.guest-info-row input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+@media (max-width: 768px) {
+    .guest-info-row {
+        flex-direction: column;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+
+select.form-control {
+    height: 40px;
+    padding: 5px 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z' fill='%23000000'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    border-radius: 5px;
+}
+
+/******Amenities*****/
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-group.text-center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.search-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 10px; /* Small space between search bar and table */
+}
+
+.search-container input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    background: #2196F3;
+    color: white;
+    font-size: 14px;
+    border: 1px solid #2196F3;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #0b7dda;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.horizontal-box {
+    width: 100%;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px; /* Add space between boxes */
+}
+
+.box-info-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header-container h4 {
+    margin: 0;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+.search-bar input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 200px;
+}
+.search-bar button {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+.horizontal-box {
+    overflow-x: auto;
+}
+#bookingTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+#bookingTable th, #bookingTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+#bookingTable th {
+    background-color: #f4f4f4;
+}
+#bookingTable td a {
+    color: #007bff;
+    text-decoration: none;
+}
+#bookingTable td a:hover {
+    text-decoration: underline;
+}
+
